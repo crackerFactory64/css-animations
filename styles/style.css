@@ -48,6 +48,23 @@ body {
   min-height: 100dvh;
 }
 
+header {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: calc(100% - 5em);
+}
+
+header ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+header a {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
 h1 {
   font-size: 5rem;
   letter-spacing: 0.5rem;

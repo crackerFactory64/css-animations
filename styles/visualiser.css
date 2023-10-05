@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap");
+
+@keyframes play {
+  0%,
+  100% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+}
+
+body {
+  background-color: darkslateblue;
+  color: #fff;
+  font-family: "Oxygen", Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+  width: calc(100% - 10em);
+}
+
+header {
+  padding: 2em 0;
+}
+
+header > * {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+}
+
+header a {
+  color: inherit;
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.flex {
+  align-items: flex-end;
+  display: flex;
+  gap: 5px;
+  height: 33dvh;
+  justify-content: space-around;
+  margin: auto;
+  max-width: 500px;
+  width: calc(100% - 10em);
+}
+
+.bar {
+  animation: play infinite 0.5s linear;
+  background-color: green;
+  width: 3em;
+}
+
+.bar:nth-child(2n) {
+  animation-delay: 0.1s;
+}
+
+.bar:nth-child(3n) {
+  animation-delay: 0.05s;
+}
