@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+
+@keyframes bounce {
+  0%,
+  100% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: calc(100% - 200px);
+  }
+}
+
+body {
+  background-color: aquamarine;
+  font-family: "Young Serif", serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  width: calc(100% - 10em);
+}
+
+header {
+  padding: 2em;
+}
+
+header > * {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+header a {
+  color: inherit;
+}
+
+h1 {
+  margin: 0;
+}
+
+.animation {
+  aspect-ratio: 1;
+  border: 10px solid black;
+  margin-top: 1em;
+  position: relative;
+  width: 100%;
+}
+
+.ball {
+  aspect-ratio: 1;
+  animation: bounce 1s infinite linear;
+  background-color: yellow;
+  bottom: 0;
+  border: 5px solid black;
+  border-radius: 50%;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}

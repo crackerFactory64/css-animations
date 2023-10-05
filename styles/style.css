@@ -55,9 +55,11 @@ header {
 }
 
 header ul {
+  display: flex;
+  gap: 2em;
   list-style: none;
   padding-left: 0;
-  text-align: center;
+  justify-content: center;
 }
 
 header a {
