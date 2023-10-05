@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap");
+
+@keyframes hop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5em);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes toss {
+  0%,
+  100% {
+    transform: skew(0);
+  }
+
+  50% {
+    transform: skew(45deg, 45deg);
+  }
+}
+
+body {
+  background-color: black;
+  color: greenyellow;
+  font-family: "Pixelify Sans", monospace;
+  min-height: 100dvh;
+}
+
+h1 {
+  font-size: 5rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  gap: 10em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 10em auto;
+  max-width: 80em;
+  width: calc(100% - 3em);
+}
+
+.shape {
+  aspect-ratio: 1;
+  border: 10px dashed black;
+  max-height: 500px;
+}
+
+.square {
+  animation: spin 4s infinite linear;
+  background-color: blueviolet;
+}
+
+.circle {
+  animation: shrink 2s infinite linear;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.circle:not(:nth-child(2)) {
+  animation: toss 2s infinite linear;
+  background-color: aqua;
+}
+
+.square:last-of-type {
+  animation: hop 0.6s infinite linear;
+  background-color: chocolate;
+}
